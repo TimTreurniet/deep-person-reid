@@ -1,3 +1,14 @@
+[project]
+name = "deep-person-reid"
+readme = "README.md"
+version = "0.0.0"
+authors = [
+    { name = "Dan Miller", email = "nobody@gmail.com" }
+]
+dependencies = [
+    "numpy",
+    "cython
+]
 [build-system]
 build-backend = 'setuptools.build_meta'
 requires = [
