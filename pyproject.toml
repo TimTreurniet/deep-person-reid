@@ -1,15 +1,30 @@
+[build-system]
+requires = ["setuptools", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
+
 [tool.poetry]
-name = "deep-person-reid"
+name = "torchreid"
 version = "0.1.0"
-description = ""
-authors = ["Tim <tim@studiodiip.com>"]
-readme = "README.md"
-packages = [{include = "torchreid"}]
+description = "A library for deep learning person re-ID in PyTorch"
+authors = ["Kaiyang Zhou <k.zhou@qmul.ac.uk>"]
+license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.6"
+numpy = "^1.19"
+cython = "^0.29"
+torch = "^1.8"
 
+[tool.poetry.dev-dependencies]
+pytest = "^5.1"
 
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[tool.poetry.scripts]
+torchreid = "torchreid.main:main"
+
+[tool.poetry.extras]
+docs = ["sphinx", "sphinx-rtd-theme"]
+test = ["pytest"]
+
+[tool.poetry.build]
+requires = ["setuptools", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
