@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Tim <tim@studiodiip.com>"]
 readme = "README.md"
-packages = [{include = "deep_person_reid"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
