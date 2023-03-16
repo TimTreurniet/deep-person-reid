@@ -39,6 +39,7 @@ def get_requirements(filename='requirements.txt'):
     here = osp.dirname(osp.realpath(__file__))
     with open(osp.join(here, filename), 'r') as f:
         requires = [line.replace('\n', '') for line in f.readlines()]
+    print(f"{len(requires)} requirements loaded from {filename}.")
     return requires
 
 
@@ -49,7 +50,7 @@ setup(
     author='Kaiyang Zhou',
     license='MIT',
     long_description=readme(),
-    url='https://github.com/KaiyangZhou/deep-person-reid',
+    url='https://github.com/TimTreurniet/deep-person-reid',
     packages=find_packages(),
     install_requires=get_requirements(),
     keywords=['Person Re-Identification', 'Deep Learning', 'Computer Vision'],
