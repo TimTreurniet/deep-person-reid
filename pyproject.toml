@@ -1,18 +1,15 @@
-[project]
+[tool.poetry]
 name = "deep-person-reid"
+version = "0.1.0"
+description = ""
+authors = ["Tim <tim@studiodiip.com>"]
 readme = "README.md"
-version = "0.0.0"
-authors = [
-    { name = "Dan Miller", email = "nobody@gmail.com" }
-]
-dependencies = [
-    "numpy",
-    "cython"
-]
+packages = [{include = "deep_person_reid"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
 [build-system]
-build-backend = 'setuptools.build_meta'
-requires = [
-    'setuptools',
-    'cython',
-    'numpy'
-]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
